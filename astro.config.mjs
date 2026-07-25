@@ -5,12 +5,10 @@ import tailwind from '@astrojs/tailwind';
 export default defineConfig({
   integrations: [tailwind()],
   site: 'https://skilltao.com',
-  base: '/skilltao.com/',
+  base: '',
   output: 'static',
-  // 构建到 dist，然后复制到根目录（GitHub Pages 根目录托管）
   outDir: 'dist',
-  // 技能详情页预生成，使用数据中的 slug
   build: {
-    format: 'file',
+    format: 'directory',
   },
 });
